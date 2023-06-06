@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@500&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+		  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+		  crossorigin="anonymous" 
+		  referrerpolicy="no-referrer" />
+    <title>Rizalman Boutique </title>
+</head>
+<body>
+    
+    <script src="index.js"></script>
+    <div class="titleHeading">
+        <h2 class="title"> Rizalman Boutique <i class="fa-regular fa-heart"></i></h2>
+    </div>
+<div class="formBox">
+    <form id="form">
+        <h2 class="details"><i class="fa-solid fa-circle-info"></i> Enter details</h2>
+        <h4><i class="fa-solid fa-address-book"></i> CUSTOMER INFO</h4>
+        <div class="custInfo">
+            <table>
+                <tr>
+                    <th><label for="custName">Customer Name</label></th>
+                    <td><input type="text" id="custName" required></td>
+                </tr>
+                <tr>
+                    <th><label for="custAddress">Address</label></th>
+                    <td><input type="text" id="custAddress" required></td>
+                </tr>
+                <tr>
+                    <th><label for="contactNo">Contact Number</label></th>
+                    <td><input type="text" id="contactNo" required></td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <h4><i class="fa-solid fa-cart-shopping"></i> ORDER DETAILS</h4>
+        <div class="orderDetails">
+            <table>
+                <tr>
+                    <th class="typeB">Type of Baju</th>
+                    <td class="qty">Quantity</td>
+                </tr>
+                <tr>
+                    <th><label for="bajuKebaya">Baju Kebaya</label></th>
+                    <td><input type="number" id="bajuKebaya" min="0"></td>
+                </tr>
+                <tr>
+                    <th><label for="bajuMelayu">Baju Melayu Cekak Musang</label></th>
+                    <td><input type="number" id="bajuMelayu" min="0"></td>
+                </tr>
+            </table>
+        </div>
+
+        <h4><i class="fa-solid fa-credit-card"></i> PAYMENT DETAILS</h4>
+        <div class="paymentDetails">
+            <table>
+                <tr>
+                    <th><label for="totalAmount">Total Amount</label></th>
+                    <td><textarea readonly id="totalAmount" name="totalAmount" rows="1" cols="21"></textarea></td>
+                </tr>
+                <tr>
+                    <th><label for="deposit">Deposit</label></th>
+                    <td><input type="number" id="deposit" min="0" oninput="calcBalance()" ></td>
+                </tr>
+                <tr>
+                    <th><label for="balance">Balance</label></th>
+                    <td><textarea readonly id="balance" name="balance" rows="1" cols="21"></textarea></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="buttons">
+            <button title="CALCULATE" type="button" id="calculateButton" onclick="calculate()"> <i class="fa-solid fa-equals"></i> CALCULATE </button>
+            <button title="RECEIPT" type="button" id="receiptButton" onclick="receipt()"><i class="fa-sharp fa-solid fa-file-invoice-dollar"></i> RECEIPT </button>
+            <button title="CLEAR" type="reset" id="clearButton" onclick="clear()"><i class="fa-solid fa-rotate-left"></i> CLEAR </button>
+        </div>
+
+    </form>
+    
+    <div class="copyright-box">
+        <footer>
+            <div class="footer">
+                <p>Copyright &copy;2023 <span>Zarin Sofia.</span> All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</div>   
+</body>
+</html>
